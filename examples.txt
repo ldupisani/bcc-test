@@ -1,0 +1,1 @@
+sudo python3 argdist.py -c -H 'p:c:write(int fd, void *buf, size_t len):size_t:len'
