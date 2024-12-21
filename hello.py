@@ -14,7 +14,7 @@ int hello(void *ctx) {
 b = BPF(text=program)
 
 # Attach the program to execve syscall
-syscall = b.get_syscall_fnname("poll")
+syscall = b.get_syscall_fnname("systemd")
 b.attach_kprobe(event=syscall, fn_name="hello")
 
 # Print trace output
