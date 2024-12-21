@@ -14,7 +14,7 @@ int hello(void *ctx) {
 b = BPF(text=program)
 
 # Attach the program to execve syscall
-syscall = b.get_syscall_fnname("top")
+syscall = b.get_syscall_fnname("execve")
 b.attach_kprobe(event=syscall, fn_name="hello")
 
 # Print trace output
